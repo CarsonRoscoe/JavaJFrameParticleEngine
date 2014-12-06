@@ -11,17 +11,17 @@ public class Particle {
     /**
      * The x position of the particle.
      */
-    private int myX;
+    private double myX;
     
     /**
      * The y position of the particle.
      */
-    private int myY;
+    private double myY;
     
     /**
      * The speed of the particle.
      */
-    private int mySpeed;
+    private double mySpeed;
     
     /**
      * The angle at which the particle travels.
@@ -53,6 +53,11 @@ public class Particle {
     private double myYVelocity;
     
     /**
+     * The size of the particle.
+     */
+    private int mySize;
+    
+    /**
      * The colour of the particle.
      */
     Color myColor;
@@ -68,7 +73,7 @@ public class Particle {
      * @param size of the particle.
      * @param color of the particle.
      */
-    public Particle(int x, int y, double angle, int speed, int life, int size, Color color) {
+    public Particle(int x, int y, double angle, double speed, int life, int size, Color color) {
         myX = x;
         myY = y;
         mySpeed = speed;
@@ -78,6 +83,7 @@ public class Particle {
         myXVelocity = Math.cos(myAngle) * mySpeed;
         myYVelocity = -Math.sin(myAngle) * mySpeed;
         myColor = color;
+        mySize = size;
     }
     
     /**
@@ -101,15 +107,19 @@ public class Particle {
     /**
      * @return the x value of the object.
      */
-    public int getX() {
+    public double getX() {
         return myX;
     }
     
     /**
      * @return the y value of the object.
      */
-    public int getY() {
+    public double getY() {
         return myY;
+    }
+    
+    public int getSize() {
+        return mySize;
     }
     
     /**

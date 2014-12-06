@@ -87,7 +87,7 @@ public class Engine extends JFrame {
             while (size-- > 0) {
                 Particle particle = list.get(size);
                 g.setColor(particle.getColor());
-                g.fillOval(particle.getX(), particle.getY(), 10, 10);
+                g.fillOval((int) particle.getX(), (int) particle.getY(), 10, 10);
             }
         }
         
